@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Chat Novakorp - Farmalink</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #6a0dad, #b446ef);
+      color: #ffffff;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+    }
+    header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    .logo {
+      height: 80px;
+      margin: 0 20px;
+    }
+    .container {
+      padding: 40px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- Placeholder logos -->
+    <svg class="logo" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+      <rect width="200" height="60" fill="#fff" rx="8" ry="8" />
+      <text x="100" y="35" text-anchor="middle" font-size="24" fill="#6a0dad" font-family="Roboto">Farmalink</text>
+    </svg>
+    <svg class="logo" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+      <rect width="200" height="60" fill="#fff" rx="8" ry="8" />
+      <text x="100" y="35" text-anchor="middle" font-size="24" fill="#6a0dad" font-family="Roboto">Novakorp</text>
+    </svg>
+  </header>
+  <div class="container">
+    <h1>Bienvenido al Chat Novakorp</h1>
+    <p>Chatea con nuestro asistente para obtener respuestas rápidas.</p>
+  </div>
+
+  <script type="module">
+    import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js";
+    Chatbot.init({
+        chatflowid: "7a54bd7d-d539-476e-9c2d-bc5d9910f485",
+        apiHost: "https://flowise-99868276161.us-central1.run.app",
+        chatflowConfig: {
+            /* Chatflow Config */
+        },
+        observersConfig: {
+            /* Observers Config */
+        },
+        theme: {
+            button: {
+                backgroundColor: '#3B81F6',
+                right: 20,
+                bottom: 20,
+                size: 48,
+                dragAndDrop: true,
+                iconColor: 'white',
+                customIconSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg',
+                autoWindowOpen: {
+                    autoOpen: true,
+                    openDelay: 2,
+                    autoOpenOnMobile: false
+                }
+            },
+            tooltip: {
+                showTooltip: true,
+                tooltipMessage: 'Hi There \ud83d\udc4b!',
+                tooltipBackgroundColor: 'black',
+                tooltipTextColor: 'white',
+                tooltipFontSize: 16
+            },
+            disclaimer: {
+                title: 'Aviso',
+                message: "Al utilizar este chatbot, aceptas los <a target=\"_blank\" href=\"https://novakorp.io/terms\">Términos y Condiciones</a>",
+                textColor: 'black',
+                buttonColor: '#3b82f6',
+                buttonText: 'Comenzar Chat',
+                buttonTextColor: 'white',
+                blurredBackgroundColor: 'rgba(0, 0, 0, 0.4)',
+                backgroundColor: 'white'
+            },
+            customCSS: ``,
+            chatWindow: {
+                showTitle: true,
+                showAgentMessages: true,
+                title: 'Novakorp Bot',
+                titleAvatarSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg',
+                welcomeMessage: 'Hola! :)',
+                errorMessage: 'Ha ocurrido un error',
+                showProcessFlow: false,
+                backgroundColor: '#ffffff',
+                backgroundImage: '',
+                height: 700,
+                width: 400,
+                fontSize: 16,
+                starterPrompts: [
+                    "\u00bfA qué se dedica farmalink?",
+                    "\u00bfCuales son las responsabilidades del área de Gerencia Clínica"
+                ],
+                starterPromptFontSize: 15,
+                clearChatOnReload: false,
+                sourceDocsTitle: 'Fuentes:',
+                renderHTML: true,
+                botMessage: {
+                    backgroundColor: '#f7f8ff',
+                    textColor: '#303235',
+                    showAvatar: true,
+                    avatarSrc: 'https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/parroticon.png'
+                },
+                userMessage: {
+                    backgroundColor: '#3B81F6',
+                    textColor: '#ffffff',
+                    showAvatar: true,
+                    avatarSrc: 'https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/usericon.png'
+                },
+                textInput: {
+                    placeholder: 'Escribe tu pregunta',
+                    backgroundColor: '#ffffff',
+                    textColor: '#303235',
+                    sendButtonColor: '#3B81F6',
+                    maxChars: 50,
+                    maxCharsWarningMessage: 'Has superado el límite de caracteres. Por favor, escribe menos de 50 caracteres.',
+                    autoFocus: true,
+                    sendMessageSound: true,
+                    sendSoundLocation: 'send_message.mp3',
+                    receiveMessageSound: true,
+                    receiveSoundLocation: 'receive_message.mp3'
+                },
+                feedback: {
+                    color: '#303235'
+                },
+                dateTimeToggle: {
+                    date: true,
+                    time: true
+                },
+                footer: {
+                    textColor: '#303235',
+                    text: 'Potenciado por',
+                    company: 'Novakorp',
+                    companyLink: 'https://novakorp.com'
+                }
+            }
+        }
+    })
+  </script>
+
+</body>
+</html>
